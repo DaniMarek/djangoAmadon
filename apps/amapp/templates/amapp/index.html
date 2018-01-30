@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amadon</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/amapp/styles.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid bg-1 text-center">
+		<h1>Amadon Store!</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<form action="/buyitem" method="POST">
+						{% csrf_token %}
+					<tr>
+						<td>Dojo T-Shirt (limit 4 per purchase)</td>
+						<td>$19.99</td>
+						<td><select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							</select>
+							<button class="btn" type="submit">Buy!</button>
+							<input type="hidden" name="buyshirt" value="1010">
+						</td>
+					</tr>
+					<tr>
+						<td>Dojo Sweater (limit 4 per purchase)</td>
+						<td>$29.99</td>
+						<td><select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							</select>
+							<button class="btn" type="submit">Buy!</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Dojo Cup (limit 4 per purchase)</td>
+						<td>$4.99</td>
+						<td><select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<button class="btn"  type="submit">Buy!</button></td>
+					</tr>
+					<tr>
+						<td>Algorithm Book (limit 4 per purchase)</td>
+						<td>$49.99</td>
+						<td><select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select><button class="btn"  type="submit">Buy!</button></td>			
+					</tr>
+				</form>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

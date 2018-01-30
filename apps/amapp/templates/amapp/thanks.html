@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amadon Checkout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/amapp/styles.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid bg-1 text-center">
+		<h1>Thank you for your business!</h1>
+		<h3>We charged your card for {{request.session.price}}</h3>
+		<h3>You have ordered {{request.session.item}} items so far and spent {{request.session.price}} with Amadon.com!</h3>
+		<a href="">Go Back</a>
+	</div>
+</body>
+</html>

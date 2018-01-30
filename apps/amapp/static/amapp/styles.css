@@ -1,0 +1,30 @@
+.bg-1{
+	background-image: url(https://cdn.notonthehighstreet.com/fs/a2/bb/5662-8dea-465d-8333-51cf7ca90d49/original_white-and-silver-glitter-wedding-confetti.jpg);
+	min-width: 100%;
+	min-height: 100%; 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow-y: hidden;
+	overflow-y: hidden;
+	color: black; 
+}
+.table{
+	width: 550px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: white;
+}
+
+.container-fluid{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+/*.btn{
+	padding-left:10px;
+}
+*//*form{
+	
+}*/
+a{
+	color: white;
+}
