@@ -21,55 +21,24 @@
 				</tr>
 			</thead>
 			<tbody>
+				{% for i in request.session.products %}
 				<form action="/buyitem" method="POST">
 						{% csrf_token %}
 					<tr>
-						<td>Dojo T-Shirt (limit 4 per purchase)</td>
-						<td>$19.99</td>
-						<td><select>
+						<td>{{i.item}} (limit 4 per purchase)</td>
+						<td>{{i.price}}<input type="hidden" name="price" value="{{i.id}}"></td>
+						<td>
+							<select name="quantity" id="">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							</select>
-							<button class="btn" type="submit">Buy!</button>
-							<input type="hidden" name="buyshirt" value="1010">
+							<button class="btn" type="submit" value="buyitem">Buy!</button>
 						</td>
-					</tr>
-					<tr>
-						<td>Dojo Sweater (limit 4 per purchase)</td>
-						<td>$29.99</td>
-						<td><select>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							</select>
-							<button class="btn" type="submit">Buy!</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Dojo Cup (limit 4 per purchase)</td>
-						<td>$4.99</td>
-						<td><select>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-						<button class="btn"  type="submit">Buy!</button></td>
-					</tr>
-					<tr>
-						<td>Algorithm Book (limit 4 per purchase)</td>
-						<td>$49.99</td>
-						<td><select>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select><button class="btn"  type="submit">Buy!</button></td>			
 					</tr>
 				</form>
+				{% endfor %}
 			</tbody>
 		</table>
 	</div>
